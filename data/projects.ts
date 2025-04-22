@@ -3,8 +3,8 @@ export const projects = [
       title: "Pokedex",
       description: "Eine Angular-App mit API-Zugriff auf Pokémon-Daten.",
       image: "/images/pokedex.png",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Michaelfeddersen",
+      demo: "https://michaelfeddersen.de/pokedex",
     },
     {
       title: "Quiz",
