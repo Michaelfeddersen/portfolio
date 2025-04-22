@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
+import { projects } from "@/data/projects";
+
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,29 +13,7 @@ export default function Portfolio() {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
-  const projects = [
-    {
-      title: "Pokedex",
-      description: "Eine Angular-App mit API-Zugriff auf Pokémon-Daten.",
-      image: "/images/pokedex.png",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Quiz",
-      description: "Ein Quizspiel mit Sound, HTML, CSS und JavaScript.",
-      image: "/images/quiz.png",
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "To-Do Liste",
-      description: "Klassische Aufgabenliste mit interaktiver Benutzeroberfläche.",
-      image: "/images/todo.png",
-      github: "#",
-      demo: "#",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -43,7 +23,7 @@ export default function Portfolio() {
           {darkMode ? <Sun /> : <Moon />}
         </Button>
       </header>
-    
+
       <main className="max-w-5xl mx-auto px-4 grid gap-10">
         <section className="text-center">
           <motion.h2
