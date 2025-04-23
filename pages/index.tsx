@@ -18,67 +18,75 @@ export default function Portfolio() {
 
 
   return (
-   
+
     <div className="relative z-10 min-h-screen text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-     <Hero />
-     <header className="p-6 flex justify-between items-center max-w-5xl mx-auto">
-      
-        <h1 className="text-2xl font-bold">Mein Portfolio</h1>
-        {/* <Button variant="ghost" className="p-0"> */}
-        <label className="switch cursor-pointer">
-          <input
-            id="checkbox"
-            type="checkbox"
-            checked={darkMode}
-            onChange={() => setDarkMode(!darkMode)}
-          />
-          <span className="slider">
-            <div className="star star_1"></div>
-            <div className="star star_2"></div>
-            <div className="star star_3"></div>
-            <svg viewBox="0 0 16 16" className="cloud_1 cloud">
-              <path
-                transform="matrix(.77976 0 0 .78395-299.99-418.63)"
-                fill="#fff"
-                d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
-              />
-            </svg>
-          </span>
-        </label>
-        {/* </Button> */}
+      <Hero />
+      <header className="p-6 flex justify-end items-center max-w-5xl mx-auto">
+        {/* <h1 className="text-2xl font-bold">Mein Portfolio</h1> */}
+        <div className="flex items-center justify-center">
+          <label className="theme-switch ">
+            <input className="theme-switch__checkbox  w-[50px] h-[50px]" type="checkbox"
+              checked={darkMode}
+              onChange={() => setDarkMode(!darkMode)}
+            />
+            <div className="theme-switch__container">
+              <div className="theme-switch__clouds"></div>
+              <div className="theme-switch__stars-container">
+                <svg fill="none" viewBox="0 0 144 55" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="currentColor"
+                    d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div className="theme-switch__circle-container">
+                <div className="theme-switch__sun-moon-container">
+                  <div className="theme-switch__moon">
+                    <div className="theme-switch__spot"></div>
+                    <div className="theme-switch__spot"></div>
+                    <div className="theme-switch__spot"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="theme-switch__shooting-star"></div>
+              <div className="theme-switch__shooting-star-2"></div>
+              <div className="theme-switch__meteor"></div>
+              <div className="theme-switch__stars-cluster">
+                <div className="star"></div>
+                <div className="star"></div>
+                <div className="star"></div>
+                <div className="star"></div>
+                <div className="star"></div>
+              </div>
+              <div className="theme-switch__aurora"></div>
+              <div className="theme-switch__comets">
+                <div className="comet"></div>
+                <div className="comet"></div>
+              </div>
+            </div>
+          </label>
+        </div>
       </header>
 
       <main className="max-w-5xl mx-auto px-4 grid gap-10">
-      <div className="flex items-center justify-center gap-6">
-  {/* Bild-Sektion */}
-  <div className="flex items-center justify-start gap-6 w-full">
-  {/* Bild ganz links */}
-  <section className="flex-shrink-0 self-start padding-left-4 shadow-lg">
-    <img
-      src="/images/me.png"
-      alt="me"
-      className="rounded-full object-cover"
-      style={{ height: "calc(100% + 4px)", width: "auto", maxHeight: "150px" }}
-    />
-  </section>
+        <div className="flex items-center justify-center gap-6">
+          {/* Bild-Sektion */}
+          <div className="flex items-center gap-6 w-full px-2">
 
-  {/* Text mittig innerhalb des verfügbaren Platzes */}
-  <section className="flex-1 text-center">
-    <motion.h2
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-3xl font-semibold mb-2"
-    >
-      Willkommen auf meinem Portfolio
-    </motion.h2>
-    <p className="text-lg text-gray-600 dark:text-gray-300">
-      Hier findest du eine Auswahl meiner Projekte und Informationen über mich.
-    </p>
-  </section>
-</div>
-</div>
+
+            <section className="flex-1 text-center">
+
+              <h2 className="text-2xl font-bold mb-2">Willkommen auf meinem Portfolio</h2>
+
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Hier findest du eine Auswahl meiner Projekte und Informationen über mich.
+              </p>
+            </section>
+          </div>
+        </div>
         <section>
           <h3 className="text-2xl font-bold mb-4">Projekte</h3>
           <div className=" cards grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -127,7 +135,6 @@ export default function Portfolio() {
                           rel="noopener noreferrer"
                         >
                           <button
-                            href="#"
                             className="flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 px-4 py-2 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2"
                           >
                             <span
@@ -141,6 +148,7 @@ export default function Portfolio() {
                               </svg>
                               <span className="ml-1 text-white">GitHub</span>
                             </div>
+
 
                           </button>
                         </a>
@@ -156,33 +164,93 @@ export default function Portfolio() {
             ))}
           </div>
         </section >
-
-        <section>
-          <h3 className="text-2xl font-bold mb-2">Über mich</h3>
-          <p className="text-gray-700 dark:text-gray-300">
-            Ich bin ein leidenschaftlicher Quereinsteiger in die Webentwicklung. Ich habe mir selbständig moderne Webtechnologien beigebracht und arbeite besonders gerne mit Angular. Ich liebe es, kreative und funktionale Webanwendungen zu bauen.
-          </p>
-        </section>
-
-        <section>
-          <h3 className="text-2xl font-bold mb-2">Lebenslauf</h3>
+        <div className="flex items-start justify-center gap-6 w-full px-2">
+          <section className="flex-shrink-0 self-start pl-4">
+            <img
+              src="/images/me.png"
+              alt="me"
+              className="rounded-full object-cover shadow-lg dark:shadow-gray-900"
+              style={{ height: "calc(100% + 4px)", width: "auto", maxHeight: "124px" }}
+            // style={{ height: "150px", width: "150px" }}
+            />
+          </section>
+          <section className="flex-1 text-left">
+            <h3 className="text-2xl font-bold mb-2">Über mich</h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              Ich bin Kfz-Sachverständiger und Lackierermeister – und gleichzeitig leidenschaftlicher Webentwickler. In meiner Freizeit habe ich mir moderne Webtechnologien selbst beigebracht und liebe es, kreative und funktionale Webanwendungen zu entwickeln. Besonders gerne arbeite ich mit Angular. Mein Ziel ist es, mich in der Webentwicklung stetig weiterzuentwickeln und mein technisches Know-how aus der Kfz-Branche mit digitalen Lösungen zu verbinden.
+            </p>
+          </section>
+        </div>
+        <section className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-20">
+          {/* <h3 className="text-2xl font-bold mb-2">Lebenslauf</h3> */}
           <a
             href="/lebenslauf.pdf"
             target="_blank"
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
-            Lebenslauf ansehen
+            <button
+              className="flex w-full sm:w-auto overflow-hidden items-center text-lg font-medium focus:outline-none focus:ring-1 focus:ring-blue-700 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white shadow hover:bg-blue-700 h-12 px-7 py-3 max-w-52 whitespace-pre group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-blue-700 hover:ring-offset-2"
+            >
+              <span
+                className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"
+              ></span>
+              <div className="flex items-center">
+                <span className="ml-1 text-white flex items-center gap-2 text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                    <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                  </svg>
+
+                  Lebenslauf</span>
+              </div>
+            </button>
+          </a>
+          <a
+            href="/anlagen.pdf"
+            target="_blank"
+            className="text-blue-600 dark:text-blue-400 hover:underline">
+            <button className="flex w-full sm:w-auto overflow-hidden items-center text-lg font-medium focus:outline-none focus:ring-1 focus:ring-blue-700 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white shadow hover:bg-blue-700 h-12 px-7 py-3 max-w-52 whitespace-pre group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-blue-700 hover:ring-offset-2" >
+              <div className="flex items-center">
+                <span className="ml-1 text-white flex items-center gap-2 text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
+                    <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                    <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                  </svg>
+                  Zertifikate
+                </span>
+              </div>
+            </button>
           </a>
         </section>
 
         <section>
           <h3 className="text-2xl font-bold mb-2">Kontakt</h3>
-          <p>Du kannst mich gerne per E-Mail kontaktieren: <a className="underline" href="mailto:dein@email.de">dein@email.de</a></p>
+          <p className="flex  items-center gap-4">Du kannst mich gerne per E-Mail kontaktieren: <a className="underline" href="mailto:michaelf@michaelfeddersen.de">
+            <button
+              className="flex overflow-hidden items-center text-sm font-medium focus:outline-none focus:ring-1 focus:ring-blue-700 disabled:pointer-events-none disabled:opacity-50 bg-blue-600 text-white shadow hover:bg-blue-700 h-9 px-4 py-2 max-w-52 whitespace-pre group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-blue-700 hover:ring-offset-2"
+            >
+              <span
+                className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"
+              ></span>
+              <div className="flex items-center">
+
+                <span className="ml-1 text-white flex items-center gap-2 text-base">
+                  <svg version="1.1" viewBox="0 0 100 100" className="w-5 h-5">
+                    <path d="M95,9.9c-1.3-1.1-3.4-1.2-7-0.1c0,0,0,0,0,0c-2.5,0.8-24.7,9.2-44.3,17.3c-17.6,7.3-31.9,13.7-33.6,14.5  c-1.9,0.6-6,2.4-6.2,5.2c-0.1,1.8,1.4,3.4,4.3,4.7c3.1,1.6,16.8,6.2,19.7,7.1c1,3.4,6.9,23.3,7.2,24.5c0.4,1.8,1.6,2.8,2.2,3.2  c0.1,0.1,0.3,0.3,0.5,0.4c0.3,0.2,0.7,0.3,1.2,0.3c0.7,0,1.5-0.3,2.2-0.8c3.7-3,10.1-9.7,11.9-11.6c7.9,6.2,16.5,13.1,17.3,13.9  c0,0,0.1,0.1,0.1,0.1c1.9,1.6,3.9,2.5,5.7,2.5c0.6,0,1.2-0.1,1.8-0.3c2.1-0.7,3.6-2.7,4.1-5.4c0-0.1,0.1-0.5,0.3-1.2  c3.4-14.8,6.1-27.8,8.3-38.7c2.1-10.7,3.8-21.2,4.8-26.8c0.2-1.4,0.4-2.5,0.5-3.2C96.3,13.5,96.5,11.2,95,9.9z M30,58.3l47.7-31.6  c0.1-0.1,0.3-0.2,0.4-0.3c0,0,0,0,0,0c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1,0,0.2-0.1c-0.1,0.1-0.2,0.4-0.4,0.6L66,38.1  c-8.4,7.7-19.4,17.8-26.7,24.4c0,0,0,0,0,0.1c0,0-0.1,0.1-0.1,0.1c0,0,0,0.1-0.1,0.1c0,0.1,0,0.1-0.1,0.2c0,0,0,0.1,0,0.1  c0,0,0,0,0,0.1c-0.5,5.6-1.4,15.2-1.8,19.5c0,0,0,0,0-0.1C36.8,81.4,31.2,62.3,30,58.3z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  Email
+                </span>
+              </div>
+            </button>
+
+          </a></p>
         </section>
       </main >
 
       <footer className="p-6 text-center text-sm text-gray-500 dark:text-gray-400">
-        &copy; {new Date().getFullYear()} Dein Name
+        &copy; {new Date().getFullYear()} Michael Feddersen
       </footer>
     </div >
   );

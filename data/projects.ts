@@ -3,15 +3,15 @@ export const projects = [
       title: "Pokedex",
       description: "Eine Angular-App mit API-Zugriff auf Pokémon-Daten.",
       image: "/images/pokedex.png",
-      github: "https://github.com/Michaelfeddersen",
+      github: "https://github.com/Michaelfeddersen/Pokedex",
       demo: "https://michaelfeddersen.de/pokedex",
     },
     {
       title: "Quiz",
       description: "Ein Quizspiel mit Sound, HTML, CSS und JavaScript.",
       image: "/images/quiz.png",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Michaelfeddersen/quizapp",
+      demo: "https://michaelfeddersen.de/quizapp",
     },
     {
       title: "To-Do Liste",

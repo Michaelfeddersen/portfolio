@@ -5,6 +5,9 @@
 html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+body {
+  overflow-x: hidden;
+}
 .projektcard:hover{
   transform: scale(1.05);
   transition: transform 0.3s ease;
@@ -12,10 +15,10 @@ html {
   cursor: pointer;
  
 }
-.cards:hover> :not(:hover){
+/* .cards:hover> :not(:hover){
   filter: blur(2px);
   opacity: 0.2; 
-}
+} */
 
 
 /* background */
@@ -41,5 +44,5 @@ html {
   }
 }
 .animate-shooting-star {
-  animation: shooting-star 3s linear infinite;
+  animation: shooting-star 2s linear infinite;
 }
