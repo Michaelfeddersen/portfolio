@@ -77,9 +77,9 @@ export default function Portfolio() {
           <div className="flex items-center gap-6 w-full px-2">
 
 
-            <section className="flex-1 text-center">
+            <section className="flex-1 text-center tracking-in-expand-fwd">
 
-              <h2 className="text-2xl font-bold mb-2">Willkommen auf meinem Portfolio</h2>
+              <h2 className=" text-2xl font-bold mb-2">Willkommen auf meinem Portfolio</h2>
 
               <p className="text-lg text-gray-600 dark:text-gray-300">
                 Hier findest du eine Auswahl meiner Projekte und Informationen über mich.
@@ -164,7 +164,7 @@ export default function Portfolio() {
             ))}
           </div>
         </section >
-        <div className="flex items-start justify-center gap-6 w-full px-2">
+        <div className="flex items-start justify-center gap-6 w-full px-2 scale-in-center">
           <section className="flex-shrink-0 self-start pl-4">
             <img
               src="/images/me.png"

@@ -14,11 +14,11 @@ export const projects = [
       demo: "https://michaelfeddersen.de/quizapp",
     },
     {
-      title: "To-Do Liste",
-      description: "Klassische Aufgabenliste mit interaktiver Benutzeroberfläche.",
-      image: "/images/todo.png",
-      github: "#",
-      demo: "#",
+      title: "Notizbuch",
+      description: "Ein Notizbuch mit HTML, CSS und JavaScript. Implementiert mit LocalStorage.",
+      image: "/images/todo1.png",
+      github: "https://github.com/Michaelfeddersen/NotizApp",
+      demo: "https://michaelfeddersen.de/NotizApp",
     },
   ];
   
